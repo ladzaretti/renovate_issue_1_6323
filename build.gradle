@@ -1,19 +1,12 @@
-group = "com.mysample.renovatetest"
-version = "1.0"
-
 repositories {
-  mavenCentral()
+  jcenter()
 }
 
-configurations {
-  abc
-}
+version = currentVersion
+
+apply plugin: 'java'
+
 dependencies {
-  abc group: 'com.google.guava', name: 'guava', version: abc_gva
-}
-configurations.abc {
-  ext.destination = 'gradle/abc'
-  ext.layout = '[module].[ext]'
-  ext.unzip = true
-  ext.clean = true
+    implementation 'com.google.inject:guice:3.0:no_aop'
+    implementation 'com.google.inject:guice:3.0:javadoc'
 }
