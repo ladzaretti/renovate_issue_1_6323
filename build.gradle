@@ -6,7 +6,16 @@ version = currentVersion
 
 apply plugin: 'java'
 
+configurations {
+  abc
+}
 dependencies {
-    implementation 'com.google.inject:guice:4.2.3:no_aop'
-    implementation 'com.google.inject:guice:3.0:javadoc'
+  abc group: 'com.google.guava', name: 'guava', version: abc_gva, classifier: patchCoverage(classifier)
+  implementation 'com.google.inject:guice:3.0:no_aop'
+}
+configurations.abc {
+  ext.destination = 'gradle/abc'
+  ext.layout = '[module].[ext]'
+  ext.unzip = true
+  ext.clean = true
 }
