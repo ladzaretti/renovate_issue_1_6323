@@ -12,7 +12,7 @@ configurations {
   abc
 }
 dependencies {
-  abc group: 'org.apache', name: 'guava', version: abc_gva
+  abc group: 'com.google.guava', name: 'guava', version: abc_gva
 }
 configurations.abc {
   ext.destination = 'gradle/abc'
