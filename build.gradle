@@ -1,8 +1,18 @@
+group = "com.mysample.renovatetest"
+version = "1.0"
+
+repositories {
+  mavenCentral()
+  maven {
+    url "https://repository.cloudera.com/artifactory/cloudera-repos/"
+  }
+}
+
 configurations {
   abc
 }
 dependencies {
-  abc group: 'com.google.guava', name: 'guava', version: abc_gva
+  abc group: 'org.apache', name: 'guava', version: abc_gva
 }
 configurations.abc {
   ext.destination = 'gradle/abc'
