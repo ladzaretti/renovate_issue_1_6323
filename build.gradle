@@ -6,11 +6,15 @@ version = currentVersion
 
 apply plugin: 'java'
 
+ext.patchCoverage = { String classifier ->
+  return classifier
+}
+
 configurations {
   abc
 }
 dependencies {
-  abc group: 'com.google.guava', name: 'guava', version: abc_gva, classifier: patchCoverage(classifier)
+  abc group: 'com.google.guava', name: 'guava', version: abc_gva, classifier: patchCoverage('nt')
   implementation 'com.google.inject:guice:3.0:no_aop'
 }
 configurations.abc {

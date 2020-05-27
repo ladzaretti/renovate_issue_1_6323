@@ -1,7 +1,1 @@
 rootProject.name = 'sample'
-project.ext.patchCoverage = { String classifier ->
-  if (project.coverage) {
-    classifier = classifier ? "${classifier}-coverage" : 'coverage'
-  }
-  return classifier
-}
