@@ -7,7 +7,7 @@ version = currentVersion
 apply plugin: 'java'
 
 ext.patchCoverage = { String classifier ->
-  return classifier
+  return ''
 }
 
 configurations {
