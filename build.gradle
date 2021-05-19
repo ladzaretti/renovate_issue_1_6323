@@ -16,7 +16,7 @@ configurations {
 dependencies {
   abc group: 'com.google.guava',   name: 'guava', version: abc_gva, classifier: patchCoverage('nt')
   abc group: 'org.zeroturnaround', name: 'zt-zip', version: zt_ver, ext: 'jar'
-  implementation 'com.google.inject:guice:3.0:no_aop'
+  implementation 'com.google.inject:guice:5.0.1:no_aop'
 }
 configurations.abc {
   ext.destination = 'gradle/abc'
